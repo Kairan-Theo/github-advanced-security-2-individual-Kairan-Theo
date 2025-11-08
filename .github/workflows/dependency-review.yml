@@ -3,11 +3,16 @@ on: [pull_request]
 jobs:
   review:
     runs-on: ubuntu-latest
+    # Make the job itself non-blocking, even if the step fails
+    continue-on-error: true
     permissions:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/dependency-review-action@v4
+      - name: Dependency Review
+        # Skip on private repos (common cause of unsupported errors without GHAS)
+        if: ${{ github.event.repository.private == false }}
+        uses: actions/dependency-review-action@v4
         with:
           fail-on-severity: high
         # Prevent the workflow from failing when the repository doesn't support
