@@ -3,6 +3,7 @@ start lab
 
 Quick links:
 - Lab 1 deliverables: `docs/LAB1-Deliverables.md`
+ - Lab 3 deliverables: `docs/LAB3-Deliverables.md`
 
 Build status:
 - CodeQL: ![CodeQL](https://github.com/KOSENKMITL/github-advanced-security-2-individual-Kairan-Theo/actions/workflows/codeql.yml/badge.svg?branch=lab1-trigger)

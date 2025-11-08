@@ -2,8 +2,6 @@ name: Dependency Review
 on: [pull_request]
 jobs:
   review:
-    # Only run on public repos; skip entirely on private repos without GHAS
-    if: ${{ github.repository_visibility == 'public' }}
     runs-on: ubuntu-latest
     # Make the job itself non-blocking
     continue-on-error: true
@@ -13,8 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Dependency Review
+        if: ${{ github.event.repository.private == false }}
         uses: actions/dependency-review-action@v4
         with:
           fail-on-severity: high
         # Keep step non-blocking for any transient errors
+        continue-on-error: true
+      - name: Dependency Review (placeholder on private repos)
+        if: ${{ github.event.repository.private == true }}
+        run: echo "Dependency Review skipped on private repository without GHAS"
         continue-on-error: true
