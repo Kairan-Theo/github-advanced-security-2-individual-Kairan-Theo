@@ -1,4 +1,15 @@
 # GitHub Security Lab Starter (KOSEN-KMITL)
+start lab
+
+Quick links:
+- Lab 1 deliverables: `docs/LAB1-Deliverables.md`
+ - Lab 3 deliverables: `docs/LAB3-Deliverables.md`
+
+Build status:
+- CodeQL: ![CodeQL](https://github.com/KOSENKMITL/github-advanced-security-2-individual-Kairan-Theo/actions/workflows/codeql.yml/badge.svg?branch=lab1-trigger)
+- Gitleaks Secret Scan: ![Gitleaks](https://github.com/KOSENKMITL/github-advanced-security-2-individual-Kairan-Theo/actions/workflows/secret-scan.yml/badge.svg?branch=lab1-trigger)
+- SBOM: ![SBOM](https://github.com/KOSENKMITL/github-advanced-security-2-individual-Kairan-Theo/actions/workflows/sbom.yml/badge.svg?branch=lab1-trigger)
+- Dependency Review (PR): ![Dependency Review](https://github.com/KOSENKMITL/github-advanced-security-2-individual-Kairan-Theo/actions/workflows/dependency-review.yml/badge.svg?branch=lab1-trigger)
 
 This repository is used in the **Secure Software Development / DevSecOps laboratory**.  
 It provides a deliberately vulnerable codebase and pre-configured GitHub security automation
