@@ -10,3 +10,6 @@ jobs:
       - uses: actions/dependency-review-action@v4
         with:
           fail-on-severity: high
+        # Prevent the workflow from failing when the repository doesn't support
+        # Dependency Review (e.g., GHAS not enabled on private repos).
+        continue-on-error: true
