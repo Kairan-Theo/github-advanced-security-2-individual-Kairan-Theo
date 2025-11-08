@@ -1,4 +1,5 @@
 # GitHub Security Lab Starter (KOSEN-KMITL)
+start lab
 
 This repository is used in the **Secure Software Development / DevSecOps laboratory**.  
 It provides a deliberately vulnerable codebase and pre-configured GitHub security automation
